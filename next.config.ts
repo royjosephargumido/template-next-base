@@ -20,6 +20,9 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  allowedDevOrigins: [
+    'localhost', '192.168.1.34'
+  ]
 };
 
 export default nextConfig;
