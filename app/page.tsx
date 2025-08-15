@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import { useTheme } from "@/context";
-import Link from "next/link";
-import Image from "next/image";
-import { CookieSettings, ThemeSwitcher } from "@/components/index";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect } from 'react';
+import { CookieSettings, ThemeSwitcher } from '@/components/index';
+import { useTheme } from '@/context';
 
 export default function Home() {
   const { theme } = useTheme();
@@ -15,44 +15,44 @@ export default function Home() {
   }, [theme]);
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center">
-        <div className="flex flex-wrap items-center justify-center sm:justify-between sm:space-y-0 gap-4">
-          <div className="flex flex-col sm:flex-row items-center gap-4 select-none">
+    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
+      <main className="row-start-2 flex flex-col items-center gap-8">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:justify-between sm:space-y-0">
+          <div className="flex select-none flex-col items-center gap-4 sm:flex-row">
             <Image
-              className={theme === "light" ? `light:invert` : `dark:invert`}
-              src="/next.svg"
               alt="Next.js logo"
-              loading="eager"
-              width={130}
+              className={theme === 'light' ? 'light:invert' : 'dark:invert'}
               height={30}
+              loading="eager"
               priority
+              src="/next.svg"
+              width={130}
             />
             <Image
-              className={`${theme}:invert w-9 h-9`}
-              src="/plus.svg"
               alt="plus icon"
-              loading="eager"
-              width={0}
+              className={`${theme}:invert h-9 w-9`}
               height={0}
+              loading="eager"
               priority
+              src="/plus.svg"
+              width={0}
             />
             <div className="flex items-center gap-4">
               <Image
-                className={`${theme}:invert`}
-                src="/shadcnui.svg"
                 alt="ShadCN UI logo"
-                loading="eager"
-                width={24}
+                className={`${theme}:invert`}
                 height={24}
+                loading="eager"
                 priority
+                src="/shadcnui.svg"
+                width={24}
               />
-              <span className="light:invert font-bold text-2xl">shadcn/ui</span>
+              <span className="font-bold text-2xl light:invert">shadcn/ui</span>
             </div>
           </div>
         </div>
 
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+        <ol className="list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm sm:text-left">
           <li>
             Get started by editing app/page.tsx
             {/* <span className="font-semibold">app/page.tsx</span>. */}
@@ -60,11 +60,10 @@ export default function Home() {
         </ol>
         <ThemeSwitcher />
         <CookieSettings />
-        
       </main>
-      <footer className="row-start-3 flex flex-col gap-6 flex-wrap items-center justify-center select-none">
+      <footer className="row-start-3 flex select-none flex-col flex-wrap items-center justify-center gap-6">
         <h4>
-          Made with ❤️ by{" "}
+          Made with ❤️ by{' '}
           <Link
             className="hover:text-gray-400"
             href="https://www.facebook.com/rjargumido/"

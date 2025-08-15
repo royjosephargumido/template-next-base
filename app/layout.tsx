@@ -1,29 +1,29 @@
-import type { Metadata, Viewport } from "next";
-import { ThemeProvider } from "@/context";
+import type { Metadata, Viewport } from 'next';
+import localFont from 'next/font/local';
 import {
   MinSizeOverlay,
   ScriptsProvider,
   ViewPortIndicator,
-} from "@/components/index";
-import localFont from "next/font/local";
-import "./globals.css";
+} from '@/components/index';
+import { ThemeProvider } from '@/context';
+import './globals.css';
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+  src: './fonts/GeistVF.woff',
+  variable: '--font-geist-sans',
+  weight: '100 900',
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  src: './fonts/GeistMonoVF.woff',
+  variable: '--font-geist-mono',
+  weight: '100 900',
 });
 
 export const viewport: Viewport = {
-  colorScheme: "light",
-  themeColor: "light",
+  colorScheme: 'light',
+  themeColor: 'light',
   // Restrict Page Zoom In/Out in mobile
-  width: "device-width",
+  width: 'device-width',
   initialScale: 1,
   // maximumScale: 1,
   // userScalable: false,
@@ -32,17 +32,17 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   applicationName: "Roy Joseph Argumido's Portfolio",
   authors: [
-    { name: "Roy Joseph Argumido", url: "mailto:royjosephargumido@gmail.com" },
+    { name: 'Roy Joseph Argumido', url: 'mailto:royjosephargumido@gmail.com' },
   ],
   title: {
     default:
-      "Roy Joseph Argumido | Product Engineer & Junior Project Manager from Cebu, Philippines",
-    template: "Roy Joseph Argumido | %s",
+      'Roy Joseph Argumido | Product Engineer & Junior Project Manager from Cebu, Philippines',
+    template: 'Roy Joseph Argumido | %s',
   },
   description:
-    "Full-stack software engineer and project manager in Cebu City, Philippines, specializing in multi-disciplinary development and team leadership.",
+    'Full-stack software engineer and project manager in Cebu City, Philippines, specializing in multi-disciplinary development and team leadership.',
   verification: {
-    google: "google_verification_key_via_google_search_console", // https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification
+    google: 'google_verification_key_via_google_search_console', // https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification
   },
 };
 
@@ -53,8 +53,8 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      lang="en"
     >
       <ScriptsProvider tawktoSrc="https://embed.tawk.to/67c952fa008fee190b43d2cb/1ill6o8nu" />
       <ThemeProvider>

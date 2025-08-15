@@ -1,11 +1,11 @@
-import { Tawkto } from "../Tawkto/Tawkto";
+import { Tawkto } from '../Tawkto/tawkto';
 
-interface IScriptsProvider {
+type IScriptsProvider = {
   tawktoSrc?: string;
-}
+};
 
 export function ScriptsProvider({ tawktoSrc }: IScriptsProvider) {
-  if (process.env.NODE_ENV !== "production") {
+  if (process.env.NODE_ENV !== 'production') {
     return null;
   }
 

@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -7,8 +7,8 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "cdn.simpleicons.org",
+        protocol: 'https',
+        hostname: 'cdn.simpleicons.org',
       },
     ],
   },
@@ -20,9 +20,7 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: true,
   },
-  allowedDevOrigins: [
-    'localhost', '192.168.1.34'
-  ]
+  allowedDevOrigins: ['localhost', '192.168.1.34'],
 };
 
 export default nextConfig;

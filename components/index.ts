@@ -1,38 +1,36 @@
 // Primitives
-import { Button } from "./ui/Primitives/Button/Button";
-import { Label } from "./ui/Primitives/Label/label";
-import { MinSizeOverlay } from "./ui/Primitives/MinSizeOverlay/MinSizeOverlay";
-import { Switch } from "./ui/Primitives/Switch/switch";
-import ThemeSwitcher from "./ui/Primitives/ThemeSwitcher/ThemeSwitcher";
-import { ViewPortIndicator } from "./ui/Primitives/ViewPortIndicator/ViewPortIndicator";
 
+// Providers
+import { ScriptsProvider } from './scripts/ScriptsProvider/scripts-provider';
+// Blocks
+import { CookieSettings } from './ui/blocks/cookie-settings/cookie-settings';
+import { Button } from './ui/primitives/button/button';
+import { Label } from './ui/primitives/label/label';
+import { MinSizeOverlay } from './ui/primitives/min-size-overlay/min-size-overlay';
+import { Switch } from './ui/primitives/switch/switch';
+import ThemeSwitcher from './ui/primitives/theme-switcher/theme-switcher';
+import { ViewPortIndicator } from './ui/primitives/view-port-indicator/view-port-indicator';
 // Widgets
 import {
   Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
   CardContent,
-} from "./ui/widgets/Card/card";
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from './ui/widgets/card/card';
 import {
   Dialog,
-  DialogPortal,
-  DialogOverlay,
-  DialogTrigger,
   DialogClose,
   DialogContent,
-  DialogHeader,
-  DialogFooter,
-  DialogTitle,
   DialogDescription,
-} from "./ui/widgets/Dialog/Dialog";
-
-// Providers
-import { ScriptsProvider } from "./scripts/ScriptsProvider/ScriptsProvider";
-
-// Blocks
-import { CookieSettings } from "./ui/blocks/CookieSettings/CookieSettings";
+  DialogFooter,
+  DialogHeader,
+  DialogOverlay,
+  DialogPortal,
+  DialogTitle,
+  DialogTrigger,
+} from './ui/widgets/dialog/dialog';
 
 export {
   // Primitives
@@ -42,7 +40,6 @@ export {
   Switch,
   ThemeSwitcher,
   ViewPortIndicator,
-
   // Widgets
   Card,
   CardHeader,
@@ -60,10 +57,8 @@ export {
   DialogFooter,
   DialogTitle,
   DialogDescription,
-
   // Providers
   ScriptsProvider,
-
   // Blocks
   CookieSettings,
 };

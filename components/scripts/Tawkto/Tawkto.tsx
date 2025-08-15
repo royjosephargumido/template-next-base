@@ -1,9 +1,9 @@
-import Script from "next/script";
+import Script from 'next/script';
 
-interface ITawkto {
+type ITawkto = {
   source: string;
-}
+};
 
 export function Tawkto({ source }: ITawkto) {
-  return <Script strategy="lazyOnload" src={source} crossOrigin="anonymous" />;
+  return <Script crossOrigin="anonymous" src={source} strategy="lazyOnload" />;
 }
